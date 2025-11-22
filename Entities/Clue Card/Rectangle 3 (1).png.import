@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dfi6nxl86h4v5"
-path="res://.godot/imported/Rectangle 3.png-21398a7e4979281037bda880d24cb762.ctex"
+uid="uid://cymqv4delat43"
+path="res://.godot/imported/Rectangle 3 (1).png-2e4aa293c090e7d33cdf698d3c1aef0b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/RythmUI/textbox/Rectangle 3.png"
-dest_files=["res://.godot/imported/Rectangle 3.png-21398a7e4979281037bda880d24cb762.ctex"]
+source_file="res://Entities/Clue Card/Rectangle 3 (1).png"
+dest_files=["res://.godot/imported/Rectangle 3 (1).png-2e4aa293c090e7d33cdf698d3c1aef0b.ctex"]
 
 [params]
 

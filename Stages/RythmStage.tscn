@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://dj3ipnu180wgk"]
+[gd_scene load_steps=6 format=3 uid="uid://dj3ipnu180wgk"]
 
 [ext_resource type="Texture2D" uid="uid://d0p2jpk13ktyr" path="res://Stages/InterrogationRoom.jpg" id="1_qbrsq"]
 [ext_resource type="PackedScene" uid="uid://bcl4apgybnvbm" path="res://Entities/RythmUI/RythmUi.tscn" id="1_thuy1"]
 [ext_resource type="Texture2D" uid="uid://c8uodh2d0ooy2" path="res://Stages/BlueSketch.png" id="2_4mm3a"]
 [ext_resource type="Texture2D" uid="uid://j1shperx0eol" path="res://Stages/RedSketch.png" id="3_84dkj"]
+[ext_resource type="PackedScene" uid="uid://ctjgu4bmxokrl" path="res://Entities/Clue Card/ClueCard.tscn" id="5_84dkj"]
 
 [node name="RythmStage" type="Node2D"]
 
@@ -25,3 +26,28 @@ texture = ExtResource("3_84dkj")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="RythmUI" parent="CanvasLayer" instance=ExtResource("1_thuy1")]
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="ClueCardGroup" type="Control" parent="CanvasLayer2"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="ClueCard" parent="CanvasLayer2/ClueCardGroup" instance=ExtResource("5_84dkj")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -107.0
+offset_top = -25.0
+offset_right = 107.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2

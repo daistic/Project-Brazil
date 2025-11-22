@@ -1,0 +1,43 @@
+[gd_scene load_steps=5 format=3 uid="uid://ctjgu4bmxokrl"]
+
+[ext_resource type="Texture2D" uid="uid://cymqv4delat43" path="res://Entities/Clue Card/Rectangle 3 (1).png" id="1_24il8"]
+[ext_resource type="Script" uid="uid://6udewimagw6j" path="res://Entities/Clue Card/ClueCard.gd" id="1_gyrq6"]
+[ext_resource type="FontFile" uid="uid://c4hwc322kl463" path="res://Assets/Fonts/Times New Normal Regular.ttf" id="2_b4w8t"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_gyrq6"]
+font = ExtResource("2_b4w8t")
+font_size = 20
+font_color = Color(0, 0, 0, 1)
+
+[node name="ClueCard" type="MarginContainer"]
+offset_right = 214.0
+offset_bottom = 50.0
+script = ExtResource("1_gyrq6")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 2
+mouse_filter = 1
+texture = ExtResource("1_24il8")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="Label" type="Label" parent="MarginContainer"]
+texture_filter = 2
+layout_mode = 2
+mouse_filter = 1
+text = "My Clue is Very Long "
+label_settings = SubResource("LabelSettings_gyrq6")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
