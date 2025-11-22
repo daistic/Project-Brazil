@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://dj3ipnu180wgk"]
+
+[ext_resource type="Texture2D" uid="uid://d0p2jpk13ktyr" path="res://Stages/InterrogationRoom.jpg" id="1_qbrsq"]
+[ext_resource type="PackedScene" uid="uid://bcl4apgybnvbm" path="res://Entities/RythmUI/RythmUi.tscn" id="1_thuy1"]
+[ext_resource type="Texture2D" uid="uid://c8uodh2d0ooy2" path="res://Stages/BlueSketch.png" id="2_4mm3a"]
+[ext_resource type="Texture2D" uid="uid://j1shperx0eol" path="res://Stages/RedSketch.png" id="3_84dkj"]
+
+[node name="RythmStage" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(573, 324.75)
+scale = Vector2(0.44895837, 0.44895837)
+texture = ExtResource("1_qbrsq")
+
+[node name="Detective" type="Sprite2D" parent="."]
+position = Vector2(573, 324.75)
+scale = Vector2(0.44895837, 0.44895837)
+texture = ExtResource("2_4mm3a")
+
+[node name="Red" type="Sprite2D" parent="."]
+position = Vector2(573, 324.75)
+scale = Vector2(0.44895837, 0.44895837)
+texture = ExtResource("3_84dkj")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="RythmUI" parent="CanvasLayer" instance=ExtResource("1_thuy1")]
