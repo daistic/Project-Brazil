@@ -12,6 +12,9 @@ var is_typing: bool
 var line_index: int
 var letter_index: int
 
+const SUSPECT_TEXT_POSITION: Vector2 = Vector2(699.0, 424.0)
+const SHERLOCK_TEXT_POSITION: Vector2 = Vector2(92.0, 424.0)
+
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("advance dialogue"):
 		_handle_line_events()
@@ -28,6 +31,15 @@ func _handle_line_events() -> void:
 			_handle_text_area()
 		DialogueStruct.EVENTS.RYTHM_ON:
 			_play_rythm_mode()
+		DialogueStruct.EVENTS.MOVE_TO_SHERLOCK:
+			_move_text_area(SHERLOCK_TEXT_POSITION)
+			_handle_text_area()
+		DialogueStruct.EVENTS.MOVE_TO_SUSPECT:
+			_move_text_area(SUSPECT_TEXT_POSITION)
+			_handle_text_area()
+
+func _move_text_area(new_position: Vector2) -> void:
+	text_box.position = new_position
 
 func _handle_text_area() -> void:
 	if is_typing == false:

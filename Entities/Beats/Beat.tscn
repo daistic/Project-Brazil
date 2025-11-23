@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://dn6eyk17o7h81"]
+
+[ext_resource type="Script" uid="uid://de1pwgfskife3" path="res://Entities/Beats/Beat.gd" id="1_jpurl"]
+[ext_resource type="Texture2D" uid="uid://uwoimbv4uuif" path="res://Entities/Beats/Line 4.png" id="1_n1px2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jpurl"]
+size = Vector2(2, 25)
+
+[node name="Beat" type="Area2D"]
+scale = Vector2(1.5, 1.5)
+script = ExtResource("1_jpurl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_n1px2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_jpurl")

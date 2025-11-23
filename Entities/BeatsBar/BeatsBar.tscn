@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://b37fieklvmt6e"]
+
+[ext_resource type="Texture2D" uid="uid://fl6720sr5ree" path="res://Entities/BeatsBar/Group 1.png" id="1_n1bll"]
+[ext_resource type="Script" uid="uid://6rabkxrtxm0n" path="res://Entities/BeatsBar/BeatsBar.gd" id="2_vhwft"]
+[ext_resource type="PackedScene" uid="uid://dn6eyk17o7h81" path="res://Entities/Beats/Beat.tscn" id="3_jyv2c"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vhwft"]
+radius = 10.440307
+
+[node name="BeatsBar" type="TextureRect"]
+texture = ExtResource("1_n1bll")
+script = ExtResource("2_vhwft")
+
+[node name="LeftPool" type="Marker2D" parent="."]
+position = Vector2(7, 26)
+
+[node name="Beat" parent="LeftPool" instance=ExtResource("3_jyv2c")]
+
+[node name="RightPool" type="Marker2D" parent="."]
+position = Vector2(406, 26)
+
+[node name="Beat" parent="RightPool" instance=ExtResource("3_jyv2c")]
+is_from_right = true
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(206, 28)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -2)
+shape = SubResource("CircleShape2D_vhwft")

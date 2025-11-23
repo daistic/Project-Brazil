@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c8uodh2d0ooy2"
-path="res://.godot/imported/BlueSketch.png-8af1ecbc077b7959e558395206d0f2cf.ctex"
+uid="uid://j1shperx0eol"
+path="res://.godot/imported/RedSketch.png-edeb0f70b13780a6b51aa2ce8712fb9f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Stages/BlueSketch.png"
-dest_files=["res://.godot/imported/BlueSketch.png-8af1ecbc077b7959e558395206d0f2cf.ctex"]
+source_file="res://Stages/Placeholders/RedSketch.png"
+dest_files=["res://.godot/imported/RedSketch.png-edeb0f70b13780a6b51aa2ce8712fb9f.ctex"]
 
 [params]
 

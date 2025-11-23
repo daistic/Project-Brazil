@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://j1shperx0eol"
-path="res://.godot/imported/RedSketch.png-288f7aebfffbf55f4308c00014041710.ctex"
+uid="uid://d0p2jpk13ktyr"
+path="res://.godot/imported/InterrogationRoom.jpg-5b99223e3c9579a04d3840427e80e78e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Stages/RedSketch.png"
-dest_files=["res://.godot/imported/RedSketch.png-288f7aebfffbf55f4308c00014041710.ctex"]
+source_file="res://Stages/Placeholders/InterrogationRoom.jpg"
+dest_files=["res://.godot/imported/InterrogationRoom.jpg-5b99223e3c9579a04d3840427e80e78e.ctex"]
 
 [params]
 

@@ -8,5 +8,7 @@ extends Resource
 
 enum EVENTS{
 	NONE,
-	RYTHM_ON
+	RYTHM_ON,
+	MOVE_TO_SHERLOCK,
+	MOVE_TO_SUSPECT
 }

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d0p2jpk13ktyr"
-path="res://.godot/imported/InterrogationRoom.jpg-77aa35691305b738fbc1adc2fbdd626d.ctex"
+uid="uid://co51vc3i1odov"
+path="res://.godot/imported/Sherlock.png-b76d8efc3415ab3bbae26ca006684604.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Stages/InterrogationRoom.jpg"
-dest_files=["res://.godot/imported/InterrogationRoom.jpg-77aa35691305b738fbc1adc2fbdd626d.ctex"]
+source_file="res://Stages/Sherlock.png"
+dest_files=["res://.godot/imported/Sherlock.png-b76d8efc3415ab3bbae26ca006684604.ctex"]
 
 [params]
 

@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://bcl4apgybnvbm"]
+[gd_scene load_steps=9 format=3 uid="uid://bcl4apgybnvbm"]
 
 [ext_resource type="Script" uid="uid://c4yfaik5027ci" path="res://Entities/RythmUI/RythmUi.gd" id="1_8ac7i"]
 [ext_resource type="Resource" uid="uid://dwhohgimp3acc" path="res://Stages/Prototype.tres" id="2_0euut"]
 [ext_resource type="Texture2D" uid="uid://3cvv4xevlktq" path="res://Entities/RythmUI/textbox/TextBox.png" id="2_d8qxt"]
 [ext_resource type="FontFile" uid="uid://c4hwc322kl463" path="res://Assets/Fonts/Times New Normal Regular.ttf" id="3_6bilc"]
 [ext_resource type="Texture2D" uid="uid://bgdpu68mo0v85" path="res://Entities/RythmUI/textbox/SpeakerBox.png" id="4_cafeb"]
+[ext_resource type="PackedScene" uid="uid://b37fieklvmt6e" path="res://Entities/BeatsBar/BeatsBar.tscn" id="6_a2w2c"]
 
 [sub_resource type="FontVariation" id="FontVariation_0euut"]
 base_font = ExtResource("3_6bilc")
@@ -90,5 +91,16 @@ vertical_alignment = 1
 
 [node name="TypingTimer" type="Timer" parent="TextBox"]
 wait_time = 0.05
+
+[node name="BeatsBar" parent="." instance=ExtResource("6_a2w2c")]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -206.0
+offset_top = 15.0
+offset_right = 206.0
+offset_bottom = 72.0
+grow_horizontal = 2
 
 [connection signal="timeout" from="TextBox/TypingTimer" to="." method="_on_typing_timer_timeout"]
