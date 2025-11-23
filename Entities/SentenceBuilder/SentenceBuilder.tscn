@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://br5iq05s5fwxp"]
+
+[ext_resource type="FontFile" uid="uid://c4hwc322kl463" path="res://Assets/Fonts/Times New Normal Regular.ttf" id="1_l8rtb"]
+[ext_resource type="Script" uid="uid://diggof1r4o37u" path="res://Entities/SentenceBuilder/SentenceBuilder.gd" id="1_sufrm"]
+[ext_resource type="PackedScene" uid="uid://bb8xygmyd7xoa" path="res://Entities/Drop Zone/DropZone.tscn" id="2_sufrm"]
+
+[node name="HFlowContainer" type="HFlowContainer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+last_wrap_alignment = 1
+script = ExtResource("1_sufrm")
+drop_zone_scene = ExtResource("2_sufrm")
+font_resource = ExtResource("1_l8rtb")
+font_size = 32

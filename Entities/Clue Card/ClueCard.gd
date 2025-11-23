@@ -2,6 +2,10 @@ class_name ClueCard
 
 extends MarginContainer
 
+@onready var label: Label = $MarginContainer/Label
+
+@export var clue: String
+
 static var card_being_dragged: ClueCard = null
 
 var preview_card: ClueCard
@@ -11,6 +15,7 @@ const SCALE_SIZE: Vector2 = Vector2(1.25, 1.25)
 const SCALE_TIME: float = 0.15
 
 func _ready() -> void:
+	label.text = clue
 	_set_pivot()
 
 func _input(event: InputEvent) -> void:
@@ -19,7 +24,6 @@ func _input(event: InputEvent) -> void:
 
 func _get_drag_data(_at_position: Vector2) -> Variant:
 	preview_card = self.duplicate()
-	preview_card.scale *= SCALE_SIZE
 	
 	var preview = Control.new()
 	preview.z_index = 1

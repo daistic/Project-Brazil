@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://bcl4apgybnvbm"]
 
 [ext_resource type="Script" uid="uid://c4yfaik5027ci" path="res://Entities/RythmUI/RythmUi.gd" id="1_8ac7i"]
-[ext_resource type="Resource" uid="uid://dwhohgimp3acc" path="res://Stages/Prototype.tres" id="2_0euut"]
+[ext_resource type="Resource" uid="uid://dwhohgimp3acc" path="res://Stages/RythmStage/Prototype.tres" id="2_0euut"]
 [ext_resource type="Texture2D" uid="uid://3cvv4xevlktq" path="res://Entities/RythmUI/textbox/TextBox.png" id="2_d8qxt"]
 [ext_resource type="FontFile" uid="uid://c4hwc322kl463" path="res://Assets/Fonts/Times New Normal Regular.ttf" id="3_6bilc"]
 [ext_resource type="Texture2D" uid="uid://bgdpu68mo0v85" path="res://Entities/RythmUI/textbox/SpeakerBox.png" id="4_cafeb"]
@@ -93,6 +93,7 @@ vertical_alignment = 1
 wait_time = 0.05
 
 [node name="BeatsBar" parent="." instance=ExtResource("6_a2w2c")]
+visible = false
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5

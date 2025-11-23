@@ -1,0 +1,81 @@
+[gd_scene load_steps=8 format=3 uid="uid://dj3ipnu180wgk"]
+
+[ext_resource type="Script" uid="uid://0hjojal6dau" path="res://Stages/RythmStage/RythmStage.gd" id="1_gewst"]
+[ext_resource type="Texture2D" uid="uid://d0p2jpk13ktyr" path="res://Stages/Placeholders/InterrogationRoom.jpg" id="2_7uw8f"]
+[ext_resource type="Texture2D" uid="uid://d4ebiao6ypt43" path="res://Stages/Untitled69_20251123163245.png" id="3_7kmwp"]
+[ext_resource type="Texture2D" uid="uid://d062nppod7mys" path="res://Stages/Untitled69_20251123163252.png" id="4_fhi6a"]
+[ext_resource type="PackedScene" uid="uid://bcl4apgybnvbm" path="res://Entities/RythmUI/RythmUi.tscn" id="5_duvqr"]
+[ext_resource type="PackedScene" uid="uid://ctjgu4bmxokrl" path="res://Entities/Clue Card/ClueCard.tscn" id="6_t8s5p"]
+[ext_resource type="PackedScene" uid="uid://br5iq05s5fwxp" path="res://Entities/SentenceBuilder/SentenceBuilder.tscn" id="7_7uw8f"]
+
+[node name="RythmStage" type="Node2D"]
+script = ExtResource("1_gewst")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(573, 324.75)
+scale = Vector2(0.44895837, 0.44895837)
+texture = ExtResource("2_7uw8f")
+
+[node name="Detective" type="Sprite2D" parent="."]
+position = Vector2(573, 324.75)
+scale = Vector2(0.44895837, 0.44895837)
+texture = ExtResource("3_7kmwp")
+
+[node name="Suspect" type="Sprite2D" parent="."]
+position = Vector2(573, 324.75)
+scale = Vector2(0.44895837, 0.44895837)
+texture = ExtResource("4_fhi6a")
+
+[node name="DialogueLayer" type="CanvasLayer" parent="."]
+
+[node name="RythmUI" parent="DialogueLayer" instance=ExtResource("5_duvqr")]
+
+[node name="CardLayer" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="ClueCardGroup" type="Control" parent="CardLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="GridContainer" type="GridContainer" parent="CardLayer/ClueCardGroup"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -221.0
+offset_top = -184.0
+offset_right = 222.0
+offset_bottom = -134.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/h_separation = 15
+columns = 5
+
+[node name="ClueCard" parent="CardLayer/ClueCardGroup/GridContainer" instance=ExtResource("6_t8s5p")]
+layout_mode = 2
+clue = "Night"
+
+[node name="ClueCard2" parent="CardLayer/ClueCardGroup/GridContainer" instance=ExtResource("6_t8s5p")]
+layout_mode = 2
+clue = "Work"
+
+[node name="ClueCard3" parent="CardLayer/ClueCardGroup/GridContainer" instance=ExtResource("6_t8s5p")]
+layout_mode = 2
+clue = "DNA"
+
+[node name="ClueCard4" parent="CardLayer/ClueCardGroup/GridContainer" instance=ExtResource("6_t8s5p")]
+layout_mode = 2
+clue = "Footage"
+
+[node name="ClueCard5" parent="CardLayer/ClueCardGroup/GridContainer" instance=ExtResource("6_t8s5p")]
+layout_mode = 2
+clue = "Wound"
+
+[node name="HFlowContainer" parent="CardLayer" instance=ExtResource("7_7uw8f")]

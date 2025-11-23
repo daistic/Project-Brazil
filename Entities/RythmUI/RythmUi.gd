@@ -11,12 +11,13 @@ var text: String = " "
 var is_typing: bool
 var line_index: int
 var letter_index: int
+var is_accepting_input: bool = true
 
 const SUSPECT_TEXT_POSITION: Vector2 = Vector2(699.0, 424.0)
 const SHERLOCK_TEXT_POSITION: Vector2 = Vector2(92.0, 424.0)
 
 func _unhandled_input(event: InputEvent) -> void:
-	if event.is_action_pressed("advance dialogue"):
+	if event.is_action_pressed("advance dialogue") and is_accepting_input:
 		_handle_line_events()
 
 func _ready() -> void:
@@ -79,6 +80,8 @@ func _finish_typing() -> void:
 
 func _play_rythm_mode() -> void:
 	text_box.hide()
+	is_accepting_input = false
+	SignalHub.emit_play_rythm()
 	print("play rythm")
 
 func _on_typing_timer_timeout() -> void:
